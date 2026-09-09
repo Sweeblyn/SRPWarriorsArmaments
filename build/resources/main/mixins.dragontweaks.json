@@ -1,0 +1,8 @@
+{
+    "compatibilityLevel": "JAVA_8",
+    "package": "com.sweebow.dragontweaks.mixin",
+    "refmap": "refmap.dragontweaks.json",
+    "mixins": ["MixinEntityDragon"],
+    "client": [],
+    "server": []
+}
