@@ -1,0 +1,26 @@
+itemGroup.srpwarriorsarmaments.name=SRP: Warrior's Armaments
+
+item.semiorganic_sword.name=§eSemi-Organic Sword
+item.semiorganic_sword.desc=§fA weapon made out of Semi-Organic Alloy plated with §eGold§f that exhibits §4anti-CoTH§f properties. Capable of efficiently rending parasites.
+item.gilded_hive_bane.name=§6Gilded Hive's Bane
+item.gilded_hive_bane.desc=§fA §eSemi-Organic blade§f upgraded with technological components to enhance its §4CoTH Cell§f destroying properties, but requires a §6Module§f to function. Capable of efficiently smiting parasites corresponding to the §6Module§f placed inside.\n§9[Sneak + Use Item] with a Module in your offhand to Activate.
+
+item.semi_organic_helmet.name=§eSemi-Organic Helmet
+item.semi_organic_helmet.desc=§fA helmet made out of Semi-Organic Alloy plated with §eGold§f that hardens in response to contact with §4CoTH§f. Grants an effect that reduces parasite damage to its minimum damage and loses potency when doing so.
+item.semi_organic_chestplate.name=§eSemi-Organic Chestplate
+item.semi_organic_chestplate.desc=§fA chestplate made out of Semi-Organic Alloy plated with §eGold§f that hardens in response to contact with §4CoTH§f. Grants an effect that reduces parasite damage to its minimum damage and loses potency when doing so.
+item.semi_organic_leggings.name=§eSemi-Organic Leggings
+item.semi_organic_leggings.desc=§fLeggings made out of Semi-Organic Alloy plated with §eGold§f that harden in response to contact with §4CoTH§f. Grants an effect that reduces parasite damage to its minimum damage and loses potency when doing so.
+item.semi_organic_boots.name=§eSemi-Organic Boots
+item.semi_organic_boots.desc=§fBoots made out of Semi-Organic Alloy plated with §eGold§f that harden in response to contact with §4CoTH§f. Grants an effect that reduces parasite damage to its minimum damage and loses potency when doing so.
+
+item.blazesteel.name=§6Blazesteel Ingot
+item.blazesteel.desc=§fAn burning iron alloy infused with the power orb of a §dSummoner§f or §aManducater§f. §cEXTREMELY toxic §fto parasite matter to the point where they will burn excess biomass in an attempt to rid of it. 
+item.blazesteel_dormant.name=Dormant Blazesteel Ingot
+item.blazesteel_dormant.desc=§fAn ingot of §6Blazesteel §fseemingly waiting a power source. Can be infused with the power orb of a §cStrong Parasite§f.
+item.purified_nether_star.name=§bPurified Nether Star
+item.purified_nether_star.desc=§fA nether star purified of all evil influences. Can be used as a catalyst for specific weaponry.
+
+effect.divine.name=§eDivine Protection
+effect.consecration.name=§6Consecration
+effect.judgement.name=§6Judgement

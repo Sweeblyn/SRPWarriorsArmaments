@@ -1,178 +1,56 @@
-[22:37:20] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[22:37:20] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[22:37:20] [main/INFO] [LaunchWrapper]: Loading tweak class name org.spongepowered.asm.launch.MixinTweaker
-[22:37:21] [main/INFO] [mixin]: SpongePowered MIXIN Subsystem Version=0.8.3 Source=file:/C:/Users/Evan/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.3-SNAPSHOT/995c9ce930521d4f7a113421fd4b67d184530004/mixin-0.8.3-SNAPSHOT.jar Service=LaunchWrapper Env=CLIENT
-[22:37:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
-[22:37:22] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2860 for Minecraft 1.12.2 loading
-[22:37:22] [main/INFO] [FML]: Java is OpenJDK 64-Bit Server VM, version 1.8.0_412, running on Windows 10:amd64:10.0, installed at C:\Program Files\Eclipse Adoptium\jdk-8.0.412.8-hotspot\jre
-[22:37:22] [main/ERROR] [FML]: Apache Maven library folder was not in the format expected. Using default libraries directory.
-[22:37:22] [main/ERROR] [FML]: Full: C:\Users\Evan\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
-[22:37:22] [main/ERROR] [FML]: Trimmed: c:/users/evan/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
-[22:37:22] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
-[22:37:22] [main/INFO] [FML]: Detected deobfuscated environment, loading log configs for colored console logs.
-[22:37:23] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
-[22:37:23] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
-[22:37:23] [main/INFO] [FML]: Searching C:\Users\Evan\Documents\GitHub\Dragon-Tweaks\run\.\mods for mods
-[22:37:23] [main/INFO] [LaunchWrapper]: Calling tweak class org.spongepowered.asm.launch.MixinTweaker
-[22:37:23] [main/INFO] [mixin]: Compatibility level set to JAVA_8
-[22:37:23] [main/ERROR] [mixin]: Mixin config mixins.dragontweaks.json does not specify "minVersion" property
-[22:37:23] [main/INFO] [mixin]: Initialised Mixin FML Remapper Adapter with net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper@481ba2cf
-[22:37:23] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[22:37:23] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[22:37:23] [main/INFO] [LaunchWrapper]: Loading tweak class name org.spongepowered.asm.mixin.EnvironmentStateTweaker
-[22:37:23] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[22:37:23] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[22:37:23] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[22:37:28] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
-[22:37:28] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[22:37:28] [main/INFO] [LaunchWrapper]: Calling tweak class org.spongepowered.asm.mixin.EnvironmentStateTweaker
-[22:37:28] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[22:37:29] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
-[22:37:29] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
-[22:37:29] [main/WARN] [mixin]: Reference map 'refmap.dragontweaks.json' for mixins.dragontweaks.json could not be read. If this is a development environment you can ignore this message
-[22:37:29] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
-[22:37:30] [main/INFO] [STDOUT]: [net.minecraft.client.main.Main:main:59]: Completely ignored arguments: [--mixin.config, mixins.dragontweaks.json]
-[22:37:30] [Client thread/INFO] [net.minecraft.client.Minecraft]: Setting user: Player672
-[22:37:40] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
-[22:37:40] [Client thread/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4
-[22:37:42] [Client thread/INFO] [FML]: -- System Details --
-Details:
-	Minecraft Version: 1.12.2
-	Operating System: Windows 10 (amd64) version 10.0
-	Java Version: 1.8.0_412, Temurin
-	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
-	Memory: 420257776 bytes (400 MB) / 665845760 bytes (635 MB) up to 3790077952 bytes (3614 MB)
-	JVM Flags: 0 total; 
-	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
-	FML: 
-	Loaded coremods (and transformers): 
-	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 561.09' Renderer: 'NVIDIA GeForce GTX 1660/PCIe/SSE2'
-[22:37:42] [Client thread/INFO] [FML]: MinecraftForge v14.23.5.2860 Initialized
-[22:37:42] [Client thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
-[22:37:42] [Client thread/INFO] [FML]: Invalid recipe found with multiple oredict ingredients in the same ingredient...
-[22:37:42] [Client thread/INFO] [FML]: Replaced 1227 ore ingredients
-[22:37:43] [Client thread/INFO] [FML]: Searching C:\Users\Evan\Documents\GitHub\Dragon-Tweaks\run\.\mods for mods
-[22:37:43] [Client thread/ERROR] [FML]: The mcmod.info file in main cannot be parsed as valid JSON. It will be ignored
-com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Unterminated object at line 10 column 19 path $[0].authorList
-	at com.google.gson.internal.Streams.parse(Streams.java:60) ~[Streams.class:?]
-	at com.google.gson.JsonParser.parse(JsonParser.java:84) ~[JsonParser.class:?]
-	at com.google.gson.JsonParser.parse(JsonParser.java:59) ~[JsonParser.class:?]
-	at net.minecraftforge.fml.common.MetadataCollection.from(MetadataCollection.java:63) [MetadataCollection.class:?]
-	at net.minecraftforge.fml.common.discovery.DirectoryDiscoverer.exploreFileSystem(DirectoryDiscoverer.java:80) [DirectoryDiscoverer.class:?]
-	at net.minecraftforge.fml.common.discovery.DirectoryDiscoverer.discover(DirectoryDiscoverer.java:62) [DirectoryDiscoverer.class:?]
-	at net.minecraftforge.fml.common.discovery.ContainerType.findMods(ContainerType.java:47) [ContainerType.class:?]
-	at net.minecraftforge.fml.common.discovery.ModCandidate.explore(ModCandidate.java:74) [ModCandidate.class:?]
-	at net.minecraftforge.fml.common.discovery.ModDiscoverer.identifyMods(ModDiscoverer.java:93) [ModDiscoverer.class:?]
-	at net.minecraftforge.fml.common.Loader.identifyMods(Loader.java:427) [Loader.class:?]
-	at net.minecraftforge.fml.common.Loader.loadMods(Loader.java:568) [Loader.class:?]
-	at net.minecraftforge.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:232) [FMLClientHandler.class:?]
-	at net.minecraft.client.Minecraft.init(Minecraft.java:467) [Minecraft.class:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:378) [Minecraft.class:?]
-	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_412]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_412]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_412]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_412]
-	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
-	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_412]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_412]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_412]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_412]
-	at net.minecraftforge.legacydev.Main.start(Main.java:86) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29) [legacydev-0.2.3.1-fatjar.jar:0.2.3.1+4+372be23]
-Caused by: com.google.gson.stream.MalformedJsonException: Unterminated object at line 10 column 19 path $[0].authorList
-	at com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1559) ~[JsonReader.class:?]
-	at com.google.gson.stream.JsonReader.doPeek(JsonReader.java:491) ~[JsonReader.class:?]
-	at com.google.gson.stream.JsonReader.hasNext(JsonReader.java:414) ~[JsonReader.class:?]
-	at com.google.gson.internal.bind.TypeAdapters$29.read(TypeAdapters.java:738) ~[TypeAdapters$29.class:?]
-	at com.google.gson.internal.bind.TypeAdapters$29.read(TypeAdapters.java:731) ~[TypeAdapters$29.class:?]
-	at com.google.gson.internal.bind.TypeAdapters$29.read(TypeAdapters.java:714) ~[TypeAdapters$29.class:?]
-	at com.google.gson.internal.Streams.parse(Streams.java:48) ~[Streams.class:?]
-	... 26 more
-[22:37:43] [Client thread/INFO] [FML]: Mod dragontweaks is missing the required element 'name'. Substituting dragontweaks
-[22:37:43] [Client thread/WARN] [FML]: Mod dragontweaks is missing the required element 'version' and no fallback can be found. Substituting '1.0'.
-[22:37:45] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 419825400 nanos
-[22:37:46] [Client thread/INFO] [FML]: Forge Mod Loader has identified 5 mods to load
-[22:37:47] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, dragontweaks] at CLIENT
-[22:37:47] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, dragontweaks] at SERVER
-[22:37:49] [Client thread/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:dragontweaks
-[22:37:49] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
-[22:37:49] [Client thread/INFO] [FML]: Found 1168 ObjectHolder annotations
-[22:37:49] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
-[22:37:49] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
-[22:37:49] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
-[22:37:49] [Client thread/INFO] [FML]: Applying holder lookups
-[22:37:49] [Client thread/INFO] [FML]: Holder lookups applied
-[22:37:49] [Client thread/INFO] [FML]: Applying holder lookups
-[22:37:49] [Client thread/INFO] [FML]: Holder lookups applied
-[22:37:49] [Client thread/INFO] [FML]: Applying holder lookups
-[22:37:49] [Client thread/INFO] [FML]: Holder lookups applied
-[22:37:49] [Client thread/INFO] [FML]: Applying holder lookups
-[22:37:49] [Client thread/INFO] [FML]: Holder lookups applied
-[22:37:49] [Client thread/INFO] [FML]: Injecting itemstacks
-[22:37:49] [Client thread/INFO] [FML]: Itemstack injection complete
-[22:37:49] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
-[22:37:50] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: AHEAD Target: null
-[22:37:57] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...
-[22:37:58] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenAL
-[22:37:58] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[22:37:58] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.
-[22:37:58] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine started
-[22:38:18] [Client thread/INFO] [FML]: Max texture size: 16384
-[22:38:29] [Client thread/INFO] [net.minecraft.client.renderer.texture.TextureMap]: Created: 512x512 textures-atlas
-[22:38:33] [Client thread/INFO] [FML]: Applying holder lookups
-[22:38:33] [Client thread/INFO] [FML]: Holder lookups applied
-[22:38:33] [Client thread/INFO] [FML]: Injecting itemstacks
-[22:38:33] [Client thread/INFO] [FML]: Itemstack injection complete
-[22:38:33] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 5 mods
-[22:38:33] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
-[22:38:33] [Client thread/INFO] [com.mojang.text2speech.NarratorWindows]: Narrator library for x64 successfully loaded
-[22:38:34] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient]: Could not authorize you against Realms server: Invalid session id
-[22:38:58] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Starting integrated minecraft server version 1.12.2
-[22:38:58] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Generating keypair
-[22:38:58] [Server thread/INFO] [FML]: Injecting existing registry data into this server instance
-[22:38:58] [Server thread/INFO] [FML]: Applying holder lookups
-[22:38:58] [Server thread/INFO] [FML]: Holder lookups applied
-[22:38:59] [Server thread/INFO] [FML]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@4b478fd2)
-[22:39:00] [Server thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 488 advancements
-[22:39:01] [Server thread/INFO] [FML]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@4b478fd2)
-[22:39:01] [Server thread/INFO] [FML]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@4b478fd2)
-[22:39:01] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing start region for level 0
-[22:39:02] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 5%
-[22:39:03] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 10%
-[22:39:04] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 15%
-[22:39:05] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 19%
-[22:39:06] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 24%
-[22:39:07] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 28%
-[22:39:08] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 36%
-[22:39:09] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 44%
-[22:39:10] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 53%
-[22:39:11] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 63%
-[22:39:12] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 75%
-[22:39:13] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 87%
-[22:39:14] [Server thread/INFO] [FML]: Unloading dimension -1
-[22:39:14] [Server thread/INFO] [FML]: Unloading dimension 1
-[22:39:14] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Changing view distance to 12, from 10
-[22:39:16] [Netty Local Client IO #0/INFO] [FML]: Server protocol version 2
-[22:39:16] [Netty Server IO #1/INFO] [FML]: Client protocol version 2
-[22:39:16] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 5 mods : minecraft@1.12.2,FML@8.0.99.99,forge@14.23.5.2860,mcp@9.42,dragontweaks@1.0
-[22:39:16] [Netty Local Client IO #0/INFO] [FML]: [Netty Local Client IO #0] Client side modded connection established
-[22:39:16] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
-[22:39:16] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: Player672[local:E:01b05539] logged in with entity id 1246 at (67.5, 68.0, 249.5)
-[22:39:16] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player672 joined the game
-[22:39:17] [Server thread/WARN] [net.minecraft.server.MinecraftServer]: Can't keep up! Did the system time change, or is the server overloaded? Running 2490ms behind, skipping 49 tick(s)
-[22:39:18] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[22:39:18] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
-[22:39:30] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
-[22:39:30] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
-[22:41:54] [Client thread/INFO] [net.minecraft.client.Minecraft]: Stopping!
-[22:41:54] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping server
-[22:41:54] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving players
-[22:41:54] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worlds
-[22:41:54] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
-[22:41:54] [Server thread/INFO] [FML]: Unloading dimension 0
-[22:41:54] [Server thread/INFO] [FML]: Applying holder lookups
-[22:41:54] [Server thread/INFO] [FML]: Holder lookups applied
-[22:41:55] [Client thread/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...
-[22:41:55] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.com
+[00:00:19] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Killed Scorb]
+[00:00:19] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Killed Scorb]
+[00:00:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Killed Scorb]
+[00:00:21] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Killed Scorb]
+[00:00:23] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Killed Scorb]
+[00:00:23] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Killed Scorb]
+[00:02:02] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Killed Beckon Stage I]
+[00:02:02] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Killed Beckon Stage I]
+[00:04:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:20] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:20] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:20] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:20] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:20] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:20] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:20] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:20] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:20] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:20] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:20] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:20] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:21] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:21] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:21] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:21] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:21] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:21] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:21] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Object successfully summoned]
+[00:04:21] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Object successfully summoned]
+[00:04:23] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Killed Scorb]
+[00:04:23] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Killed Scorb]
+[00:04:25] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Killed Scorb]
+[00:04:25] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Killed Scorb]
+[00:04:27] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [@: Killed Scorb]
+[00:04:27] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [@: Killed Scorb]
+[00:05:30] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[00:05:30] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld

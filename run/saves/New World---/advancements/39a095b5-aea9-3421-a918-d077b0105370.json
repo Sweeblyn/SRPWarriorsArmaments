@@ -1,0 +1,44 @@
+{
+  "srparasites:kill_root": {
+    "criteria": {
+      "tick": "2026-09-10 15:13:10 -0600"
+    },
+    "done": true
+  },
+  "srparasites:root": {
+    "criteria": {
+      "tick": "2026-09-10 15:13:10 -0600"
+    },
+    "done": true
+  },
+  "srparasites:kill_assimilated": {
+    "criteria": {
+      "k_sim_adventurer": "2026-09-10 15:21:46 -0600"
+    },
+    "done": false
+  },
+  "srparasites:firmamentum_root": {
+    "criteria": {
+      "tick": "2026-09-10 15:13:10 -0600"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2026-09-10 15:21:46 -0600"
+    },
+    "done": true
+  },
+  "srparasites:secret_root": {
+    "criteria": {
+      "tick": "2026-09-10 15:13:10 -0600"
+    },
+    "done": true
+  },
+  "srparasites:monument_root": {
+    "criteria": {
+      "tick": "2026-09-10 15:13:10 -0600"
+    },
+    "done": true
+  }
+}
