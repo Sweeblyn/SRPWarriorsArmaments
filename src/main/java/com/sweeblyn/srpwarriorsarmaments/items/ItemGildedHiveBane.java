@@ -66,12 +66,12 @@ public class ItemGildedHiveBane extends ItemSword {
 	}
 
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
-		if (target instanceof EntityParasiteBase) {
+		if (target instanceof EntityParasiteBase && shouldApply(attacker)) {
 			Item moduleStack = new ItemStack((NBTTagCompound) stack.getOrCreateSubCompound(SRPWarriorsArmaments.MOD_ID).getTag("hivebanemodule")).getItem();
 			ItemModule module = (ItemModule)moduleStack;
 			Kind k = module.getKind();
 			
-			if (shouldApple(k, target)) {
+			if (shouldApple(k, target)) { //free will
 				apple(target);
 			} else if (k.equals(Kind.VECTORS)) {
 				
@@ -80,8 +80,6 @@ public class ItemGildedHiveBane extends ItemSword {
 			} else if (k.equals(Kind.DISLODGEMENT)) {
 				
 			}
-			
-			
 		}
 		return super.hitEntity(stack, target, attacker);
 	}
@@ -195,5 +193,9 @@ public class ItemGildedHiveBane extends ItemSword {
 		target.attackEntityFrom(DamageSource.MAGIC, 15.5f);
 		target.hurtResistantTime = hurtResistantTime;
 		return true;
+	}
+	
+	private boolean shouldApply(EntityLivingBase player) {
+		return player instanceof EntityPlayer && ((EntityPlayer) player).getCooledAttackStrength(1f) > 0.9;
 	}
 }

@@ -48,7 +48,7 @@ public class PotionJudgement extends Potion {
 			.reflectField(EntityPMalleable.class, "geneOrbbox");
 
 	public PotionJudgement() {
-		super(false, 0xea8f8c);
+		super(false, 0xffcb00);
 		this.setBeneficial();
 		this.setRegistryName("judgement");
 		this.setPotionName("effect.judgement.name");

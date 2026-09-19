@@ -1,4 +1,70 @@
 {
+  "minecraft:recipes/combat/wooden_sword": {
+    "criteria": {
+      "has_stick": "2026-09-17 22:31:25 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/wooden_pickaxe": {
+    "criteria": {
+      "has_stick": "2026-09-17 22:31:25 -0600"
+    },
+    "done": true
+  },
+  "srparasites:firmamentum_root": {
+    "criteria": {
+      "tick": "2026-09-09 09:34:03 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/wooden_axe": {
+    "criteria": {
+      "has_stick": "2026-09-17 22:31:25 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/ladder": {
+    "criteria": {
+      "has_stick": "2026-09-17 22:31:25 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2026-09-17 22:31:25 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/blaze_powder": {
+    "criteria": {
+      "has_blaze_rod": "2026-09-17 22:31:25 -0600"
+    },
+    "done": true
+  },
+  "srparasites:monument_root": {
+    "criteria": {
+      "tick": "2026-09-09 09:34:03 -0600"
+    },
+    "done": true
+  },
+  "srparasites:recipes/misc/srp_field_guide": {
+    "criteria": {
+      "has_flesh": "2026-09-09 09:34:15 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/ender_eye": {
+    "criteria": {
+      "has_blaze_powder": "2026-09-17 22:31:25 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/wooden_shovel": {
+    "criteria": {
+      "has_stick": "2026-09-17 22:31:25 -0600"
+    },
+    "done": true
+  },
   "srparasites:kill_root": {
     "criteria": {
       "tick": "2026-09-09 09:34:03 -0600"
@@ -17,7 +83,31 @@
     },
     "done": false
   },
-  "srparasites:firmamentum_root": {
+  "minecraft:recipes/brewing/golden_carrot": {
+    "criteria": {
+      "has_gold_nugget": "2026-09-17 22:31:25 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/wooden_hoe": {
+    "criteria": {
+      "has_stick": "2026-09-17 22:31:25 -0600"
+    },
+    "done": true
+  },
+  "minecraft:nether/obtain_blaze_rod": {
+    "criteria": {
+      "blaze_rod": "2026-09-17 22:31:25 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/fire_charge": {
+    "criteria": {
+      "has_blaze_powder": "2026-09-17 22:31:25 -0600"
+    },
+    "done": true
+  },
+  "srparasites:secret_root": {
     "criteria": {
       "tick": "2026-09-09 09:34:03 -0600"
     },
@@ -29,21 +119,15 @@
     },
     "done": true
   },
-  "srparasites:secret_root": {
+  "minecraft:recipes/brewing/magma_cream": {
     "criteria": {
-      "tick": "2026-09-09 09:34:03 -0600"
+      "has_blaze_powder": "2026-09-17 22:31:25 -0600"
     },
     "done": true
   },
-  "srparasites:recipes/misc/srp_field_guide": {
+  "minecraft:recipes/brewing/brewing_stand": {
     "criteria": {
-      "has_flesh": "2026-09-09 09:34:15 -0600"
-    },
-    "done": true
-  },
-  "srparasites:monument_root": {
-    "criteria": {
-      "tick": "2026-09-09 09:34:03 -0600"
+      "has_blaze_rod": "2026-09-17 22:31:25 -0600"
     },
     "done": true
   }

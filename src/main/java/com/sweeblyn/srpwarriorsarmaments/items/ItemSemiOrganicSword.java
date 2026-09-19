@@ -27,13 +27,16 @@ public class ItemSemiOrganicSword extends ItemSword {
 	}
 
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) { 
-		if (target instanceof EntityParasiteBase) {
-			//final DamageSource src = (attacker instanceof EntityPlayer) ? DamageSource.causePlayerDamage((EntityPlayer)attacker) : DamageSource.causeMobDamage(attacker);
+		if (target instanceof EntityParasiteBase && shouldApply(attacker)) {
             final int hurtResistantTime = target.hurtResistantTime;
             target.hurtResistantTime = 0;
 			target.attackEntityFrom(DamageSource.MAGIC, 7.5f);
             target.hurtResistantTime = hurtResistantTime;
         }
 		return super.hitEntity(stack, target, attacker);
+	}
+	
+	private boolean shouldApply(EntityLivingBase player) {
+		return player instanceof EntityPlayer && ((EntityPlayer) player).getCooledAttackStrength(1f) > 0.9;
 	}
 }

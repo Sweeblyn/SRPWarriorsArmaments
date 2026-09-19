@@ -22,7 +22,7 @@ public class PotionDivineProtection  extends Potion {
 	private final ResourceLocation potionIcon;
 
 	public PotionDivineProtection() {
-		super(false, 0xea8f8c);
+		super(false, 0xfad64a);
 		this.setBeneficial();
 		this.setRegistryName("divine");
 		this.setPotionName("effect.divine.name");

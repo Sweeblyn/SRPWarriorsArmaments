@@ -2,6 +2,7 @@ package com.sweeblyn.srpwarriorsarmaments.effects;
 
 import com.dhanantry.scapeandrunparasites.entity.ai.misc.EntityParasiteBase;
 import com.sweeblyn.srpwarriorsarmaments.SRPWarriorsArmaments;
+import com.sweeblyn.srpwarriorsarmaments.misc.damagesources.WADamageSources;
 import com.sweeblyn.srpwarriorsarmaments.util.MirrorUtils;
 import com.sweeblyn.srpwarriorsarmaments.util.MirrorUtils.IField;
 
@@ -25,7 +26,7 @@ public class PotionConsecration extends Potion {
 			.reflectField(EntityParasiteBase.class, "killcount");
 
 	public PotionConsecration() {
-		super(false, 0xea8f8c);
+		super(false, 0xffcb00);
 		this.setBeneficial();
 		this.setRegistryName("consecration");
 		this.setPotionName("effect.consecration.name");
@@ -37,21 +38,31 @@ public class PotionConsecration extends Potion {
 	@SubscribeEvent
 	public void onHurt(LivingHurtEvent event) {
 		EntityLivingBase ent = event.getEntityLiving();
-		if (event.getEntityLiving().isPotionActive(this) && ent instanceof EntityParasiteBase && !event.getEntityLiving().isPotionActive(MobEffects.FIRE_RESISTANCE)) {
+		if (event.getEntityLiving().isPotionActive(this) && ent instanceof EntityParasiteBase
+				&& !event.getEntityLiving().isPotionActive(MobEffects.FIRE_RESISTANCE)) {
 			int amp = ent.getActivePotionEffect(this).getAmplifier();
 			if (event.getSource().equals(DamageSource.IN_FIRE) || event.getSource().equals(DamageSource.ON_FIRE)
 					|| event.getSource().equals(DamageSource.LAVA)) {
 				event.setAmount(event.getAmount() / 4);
 				return;
+			} else if (event.getSource().equals(WADamageSources.CONSECRATION)) {
+				return;
 			}
-			event.setAmount(event.getAmount() * (1 + (0.2f * (amp + 1))));
+			// event.setAmount(event.getAmount() * (1 + (0.2f * (amp + 1))));
+
+			final int hurtResistantTime = ent.hurtResistantTime;
+			ent.hurtResistantTime = 0;
+			ent.attackEntityFrom(WADamageSources.CONSECRATION, event.getAmount() * ((0.2f * (amp + 1))));
+			ent.hurtResistantTime = hurtResistantTime;
 		}
 	}
 
 	@Override
 	public void performEffect(EntityLivingBase entityLivingBaseIn, int amplifier) {
-		if (entityLivingBaseIn instanceof EntityParasiteBase && !entityLivingBaseIn.isPotionActive(MobEffects.FIRE_RESISTANCE)) {
-			killcount$EntityParasiteBase.set(entityLivingBaseIn, Math.max(0, killcount$EntityParasiteBase.get(entityLivingBaseIn)-1));
+		if (entityLivingBaseIn instanceof EntityParasiteBase
+				&& !entityLivingBaseIn.isPotionActive(MobEffects.FIRE_RESISTANCE)) {
+			killcount$EntityParasiteBase.set(entityLivingBaseIn,
+					Math.max(0, killcount$EntityParasiteBase.get(entityLivingBaseIn) - 1));
 		}
 	}
 

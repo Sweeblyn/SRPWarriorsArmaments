@@ -35,6 +35,12 @@
     },
     "done": true
   },
+  "srparasites:recipes/misc/srp_field_guide": {
+    "criteria": {
+      "has_flesh": "2026-09-18 19:59:55 -0600"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/stone_button": {
     "criteria": {
       "has_stone": "2026-09-12 17:54:48 -0600"
@@ -53,9 +59,21 @@
     },
     "done": true
   },
+  "srparasites:kill_assimilated": {
+    "criteria": {
+      "k_sim_human": "2026-09-18 19:59:44 -0600"
+    },
+    "done": false
+  },
   "minecraft:recipes/building_blocks/stonebrick": {
     "criteria": {
       "has_stone": "2026-09-12 17:54:48 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/golden_carrot": {
+    "criteria": {
+      "has_gold_nugget": "2026-09-18 19:56:04 -0600"
     },
     "done": true
   },
@@ -71,15 +89,15 @@
     },
     "done": true
   },
-  "minecraft:adventure/root": {
-    "criteria": {
-      "killed_something": "2026-09-12 17:54:57 -0600"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/stone_pressure_plate": {
     "criteria": {
       "has_stone": "2026-09-12 17:54:48 -0600"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2026-09-12 17:54:57 -0600"
     },
     "done": true
   }

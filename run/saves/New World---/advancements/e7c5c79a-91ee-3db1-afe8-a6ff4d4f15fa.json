@@ -547,6 +547,12 @@
     },
     "done": true
   },
+  "srparasites:monument": {
+    "criteria": {
+      "detected_beckon_siv": "2026-09-15 22:56:58 -0600"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/clock": {
     "criteria": {
       "has_redstone": "2026-09-10 12:41:49 -0600"

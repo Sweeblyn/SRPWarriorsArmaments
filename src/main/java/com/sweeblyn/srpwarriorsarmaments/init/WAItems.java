@@ -4,9 +4,12 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
 import com.sweeblyn.srpwarriorsarmaments.ModelHelper;
+import com.sweeblyn.srpwarriorsarmaments.items.ItemBlazesteelCleaver;
+import com.sweeblyn.srpwarriorsarmaments.items.ItemBlazesteelKnife;
 import com.sweeblyn.srpwarriorsarmaments.items.ItemGildedHiveBane;
 import com.sweeblyn.srpwarriorsarmaments.items.ItemSemiOrganicArmor;
 import com.sweeblyn.srpwarriorsarmaments.items.ItemSemiOrganicSword;
+import com.sweeblyn.srpwarriorsarmaments.items.ItemWA;
 import com.sweeblyn.srpwarriorsarmaments.misc.WAToolMaterials;
 
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -23,6 +26,12 @@ public class WAItems {
     public static final Item semi_organic_chestplate = (Item)new ItemSemiOrganicArmor("semi_organic_chestplate", WAToolMaterials.SEMI_ORGANIC_ARMOR, EntityEquipmentSlot.CHEST);
     public static final Item semi_organic_leggings = (Item)new ItemSemiOrganicArmor("semi_organic_leggings", WAToolMaterials.SEMI_ORGANIC_ARMOR, EntityEquipmentSlot.LEGS);
     public static final Item semi_organic_boots = (Item)new ItemSemiOrganicArmor("semi_organic_boots", WAToolMaterials.SEMI_ORGANIC_ARMOR, EntityEquipmentSlot.FEET);
+    
+    public static final Item blazesteel = (Item)new ItemWA("blazesteel");
+    public static final Item blazesteel_dormant = (Item)new ItemWA("blazesteel_dormant");
+    
+    public static final Item blazesteel_knife = (Item)new ItemBlazesteelKnife(WAToolMaterials.BLAZESTEEL);
+    public static final Item blazesteel_cleaver = (Item)new ItemBlazesteelCleaver(WAToolMaterials.BLAZESTEEL);
     
 	@SubscribeEvent
 	public static void onItemRegister(RegistryEvent.Register<Item> e) {
