@@ -30,6 +30,12 @@
     },
     "done": true
   },
+  "srparasites:kill_primitive": {
+    "criteria": {
+      "k_pri_longarms": "2026-09-20 10:39:41 -0600"
+    },
+    "done": false
+  },
   "minecraft:recipes/combat/golden_chestplate": {
     "criteria": {
       "has_gold_ingot": "2026-09-10 11:51:27 -0600"
@@ -214,6 +220,12 @@
   "minecraft:recipes/redstone/dispenser": {
     "criteria": {
       "has_bow": "2026-09-10 14:24:28 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_planks": {
+    "criteria": {
+      "has_log": "2026-09-20 09:33:04 -0600"
     },
     "done": true
   },

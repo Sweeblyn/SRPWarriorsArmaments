@@ -163,6 +163,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/oak_planks": {
+    "criteria": {
+      "has_log": "2026-09-19 22:38:45 -0600"
+    },
+    "done": true
+  },
   "srparasites:kill_beckon_s1": {
     "criteria": {
       "kill_beckon_si": "2026-09-09 19:35:11 -0600"
@@ -397,17 +403,17 @@
     },
     "done": true
   },
-  "srparasites:kill_crude": {
-    "criteria": {
-      "k_crux": "2026-09-15 15:01:03 -0600"
-    },
-    "done": false
-  },
   "minecraft:story/lava_bucket": {
     "criteria": {
       "lava_bucket": "2026-09-15 14:58:49 -0600"
     },
     "done": true
+  },
+  "srparasites:kill_crude": {
+    "criteria": {
+      "k_crux": "2026-09-15 15:01:03 -0600"
+    },
+    "done": false
   },
   "minecraft:recipes/redstone/redstone_torch": {
     "criteria": {
@@ -557,6 +563,12 @@
   "minecraft:recipes/combat/diamond_helmet": {
     "criteria": {
       "has_diamond": "2026-09-15 06:43:49 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/nether_brick": {
+    "criteria": {
+      "has_netherbrick": "2026-09-19 22:48:33 -0600"
     },
     "done": true
   },

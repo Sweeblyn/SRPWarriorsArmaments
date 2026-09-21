@@ -11,6 +11,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/oak_planks": {
+    "criteria": {
+      "has_log": "2026-09-20 11:49:23 -0600"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/clock": {
     "criteria": {
       "has_redstone": "2026-09-09 16:44:32 -0600"
@@ -35,9 +41,21 @@
     },
     "done": true
   },
+  "srparasites:kill_primitive": {
+    "criteria": {
+      "k_pri_longarms": "2026-09-20 11:49:32 -0600"
+    },
+    "done": false
+  },
   "srparasites:kill_root": {
     "criteria": {
       "tick": "2026-09-09 16:44:33 -0600"
+    },
+    "done": true
+  },
+  "srparasites:columbus": {
+    "criteria": {
+      "unlock": "2026-09-20 11:49:26 -0600"
     },
     "done": true
   },
@@ -152,6 +170,12 @@
   "minecraft:adventure/root": {
     "criteria": {
       "killed_something": "2026-09-09 16:50:53 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_ingot_from_block": {
+    "criteria": {
+      "has_gold_block": "2026-09-20 11:49:23 -0600"
     },
     "done": true
   }

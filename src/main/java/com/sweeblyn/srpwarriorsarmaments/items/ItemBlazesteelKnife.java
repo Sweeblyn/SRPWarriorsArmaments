@@ -10,16 +10,19 @@ import com.sweeblyn.srpwarriorsarmaments.SRPWarriorsArmaments;
 import com.sweeblyn.srpwarriorsarmaments.init.WAPotions;
 import com.sweeblyn.srpwarriorsarmaments.misc.WAToolMaterials;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundCategory;
 
 public class ItemBlazesteelKnife extends ItemSword {
 
@@ -36,19 +39,23 @@ public class ItemBlazesteelKnife extends ItemSword {
 		this.setCreativeTab(SRPWarriorsArmaments.tab);
 	}
 
-	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
-		if (target instanceof EntityParasiteBase && shouldApply(attacker)) {
+	@Override
+	public boolean onLeftClickEntity(ItemStack stack, EntityPlayer attacker, Entity targetEntity) {
+		if (targetEntity instanceof EntityParasiteBase && shouldApply(attacker)) {
+			EntityLivingBase target = (EntityLivingBase) targetEntity;
 			if (target.isPotionActive(WAPotions.CONSECRATION)) {
 				int amp = target.getActivePotionEffect(WAPotions.CONSECRATION).getAmplifier();
 				if (amp >= 0 && amp <= 9 && (Math.random() < 0.66)) {
 					target.addPotionEffect(new PotionEffect(WAPotions.CONSECRATION, 200, amp + 1, true, true));
+					target.world.playSound(null, attacker.posX, attacker.posY, attacker.posZ, SoundEvents.ENTITY_PLAYER_HURT_ON_FIRE, SoundCategory.PLAYERS, 0.7F, 0.75F);
 				}
 			} else {
 				target.addPotionEffect(new PotionEffect(WAPotions.CONSECRATION, 200, 0, true, true));
+				target.world.playSound(null, attacker.posX, attacker.posY, attacker.posZ, SoundEvents.ENTITY_PLAYER_HURT_ON_FIRE, SoundCategory.PLAYERS, 0.7F, 0.75F);
 			}
 
 		}
-		return super.hitEntity(stack, target, attacker);
+		return super.onLeftClickEntity(stack, attacker, targetEntity);
 	}
 	
 	@Override

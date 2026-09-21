@@ -11,15 +11,18 @@ import com.sweeblyn.srpwarriorsarmaments.init.WAPotions;
 import com.sweeblyn.srpwarriorsarmaments.misc.WAToolMaterials;
 import com.sweeblyn.srpwarriorsarmaments.misc.damagesources.WADamageSources;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.SoundCategory;
 
 public class ItemBlazesteelCleaver extends ItemSword {
 
@@ -35,12 +38,11 @@ public class ItemBlazesteelCleaver extends ItemSword {
 		this.setTranslationKey("blazesteel_cleaver");
 		this.setCreativeTab(SRPWarriorsArmaments.tab);
 	}
-
-	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
-		if (target instanceof EntityParasiteBase && shouldApply(attacker)) {
-			// final DamageSource src = (attacker instanceof EntityPlayer) ?
-			// DamageSource.causePlayerDamage((EntityPlayer)attacker) :
-			// DamageSource.causeMobDamage(attacker);
+	
+	@Override
+	public boolean onLeftClickEntity(ItemStack stack, EntityPlayer attacker, Entity targetEntity) {
+		if (targetEntity instanceof EntityParasiteBase && shouldApply(attacker)) {
+			EntityLivingBase target = (EntityLivingBase) targetEntity;
 			if (target.isPotionActive(WAPotions.CONSECRATION)) {
 				int amp = target.getActivePotionEffect(WAPotions.CONSECRATION).getAmplifier();
 				
@@ -52,19 +54,22 @@ public class ItemBlazesteelCleaver extends ItemSword {
 					target.hurtResistantTime = hurtResistantTime;
 				}
 				target.world.createExplosion(attacker, target.posX, target.posY + 1.0, target.posZ, 0.5f, false);
+				target.world.playSound(null, attacker.posX, attacker.posY, attacker.posZ, SoundEvents.ENTITY_PLAYER_HURT_ON_FIRE, SoundCategory.PLAYERS, 0.7F, 0.5F);
 				target.removePotionEffect(WAPotions.CONSECRATION);
 				
 				if (Math.random() < 0.8) {
 					target.addPotionEffect(new PotionEffect(WAPotions.CONSECRATION, 200, 0, true, true));
+					target.world.playSound(null, attacker.posX, attacker.posY, attacker.posZ, SoundEvents.ENTITY_PLAYER_HURT_ON_FIRE, SoundCategory.PLAYERS, 0.7F, 0.75F);
 				}
 			} else {
 				if (Math.random() < 0.5) {
 					target.addPotionEffect(new PotionEffect(WAPotions.CONSECRATION, 200, 0, true, true));
+					target.world.playSound(null, attacker.posX, attacker.posY, attacker.posZ, SoundEvents.ENTITY_PLAYER_HURT_ON_FIRE, SoundCategory.PLAYERS, 0.7F, 0.75F);
 				}
 			}
 
 		}
-		return super.hitEntity(stack, target, attacker);
+		return super.onLeftClickEntity(stack, attacker, targetEntity);
 	}
 	
 	private boolean shouldApply(EntityLivingBase player) {

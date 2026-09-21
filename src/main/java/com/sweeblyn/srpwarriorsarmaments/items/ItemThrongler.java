@@ -49,38 +49,38 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 
-public class ItemGildedHiveBane extends ItemSword {
+public class ItemThrongler extends ItemSword {
 
-	public ItemGildedHiveBane() {
-		super(WAToolMaterials.GILDED_HIVE_BANE);
-		this.setRegistryName("gilded_hive_bane");
-		this.setTranslationKey("gilded_hive_bane");
+	public ItemThrongler() {
+		super(WAToolMaterials.THRONGLER);
+		this.setRegistryName("throngler");
+		this.setTranslationKey("throngler");
 	}
 
-	public ItemGildedHiveBane(ToolMaterial material) {
+	public ItemThrongler(ToolMaterial material) {
 		super(material);
-		this.setRegistryName("gilded_hive_bane");
-		this.setTranslationKey("gilded_hive_bane");
+		this.setRegistryName("throngler");
+		this.setTranslationKey("throngler");
 		this.setCreativeTab(SRPWarriorsArmaments.tab);
-
 	}
 
 	@Override
 	public boolean onLeftClickEntity(ItemStack stack, EntityPlayer attacker, Entity target) {
 		if (target instanceof EntityParasiteBase && shouldApply(attacker) && !stack.getOrCreateSubCompound(SRPWarriorsArmaments.MOD_ID).isEmpty()) {
 			Item moduleStack = new ItemStack((NBTTagCompound) stack.getOrCreateSubCompound(SRPWarriorsArmaments.MOD_ID).getTag("hivebanemodule")).getItem();
-			ItemModule module = (ItemModule)moduleStack;
+			ItemModule module = (ItemModule) moduleStack;
 			Kind k = module.getKind();
-			
-			if (shouldApple(k, target)) { //free will
+
+			if (shouldApple(k, target)) { // free will
 				apple(target);
-				attacker.world.playSound(null, attacker.posX, attacker.posY, attacker.posZ, SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.PLAYERS, 0.7F, 1.5F);
+				attacker.world.playSound(null, attacker.posX, attacker.posY, attacker.posZ,
+						SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.PLAYERS, 0.7F, 1.5F);
 			} else if (k.equals(Kind.VECTORS)) {
-				
+
 			} else if (k.equals(Kind.PHASE)) {
-				
+
 			} else if (k.equals(Kind.DISLODGEMENT)) {
-				
+
 			}
 		}
 		return super.onLeftClickEntity(stack, attacker, target);
@@ -91,36 +91,43 @@ public class ItemGildedHiveBane extends ItemSword {
 	public ActionResult<ItemStack> onItemRightClick(@Nonnull World world, @Nonnull EntityPlayer player,
 			@Nonnull EnumHand hand) {
 		ItemStack stackMain = player.getHeldItem(hand);
-		ItemStack stackOther = player.getHeldItem(hand==EnumHand.MAIN_HAND ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND);
+		ItemStack stackOther = player.getHeldItem(hand == EnumHand.MAIN_HAND ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND);
 		if (player.isSneaking()) {
 			if (!world.isRemote) {
-				if(!stackMain.getOrCreateSubCompound(SRPWarriorsArmaments.MOD_ID).isEmpty()) {
-					ItemStack moduleReturn = new ItemStack((NBTTagCompound) stackMain.getOrCreateSubCompound(SRPWarriorsArmaments.MOD_ID).getTag("hivebanemodule"));
-					final EntityItem entityItem = new EntityItem(world, player.posX, player.posY, player.posZ, moduleReturn);
+				if (!stackMain.getOrCreateSubCompound(SRPWarriorsArmaments.MOD_ID).isEmpty()) {
+					ItemStack moduleReturn = new ItemStack((NBTTagCompound) stackMain
+							.getOrCreateSubCompound(SRPWarriorsArmaments.MOD_ID).getTag("hivebanemodule"));
+					final EntityItem entityItem = new EntityItem(world, player.posX, player.posY, player.posZ,
+							moduleReturn);
 					entityItem.setNoPickupDelay();
 					world.spawnEntity((Entity) entityItem);
 					stackMain.getOrCreateSubCompound(SRPWarriorsArmaments.MOD_ID).removeTag("hivebanemodule");
-					
-					player.world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.BLOCK_PISTON_CONTRACT, SoundCategory.PLAYERS, 0.7F, 1.0F);
+
+					player.world.playSound(null, player.posX, player.posY, player.posZ,
+							SoundEvents.BLOCK_PISTON_CONTRACT, SoundCategory.PLAYERS, 0.7F, 1.0F);
 				}
-				
+
 				if (stackOther.getItem() instanceof ItemModule) {
 					Item moduleStack = stackOther.getItem();
-					ItemModule moduleM = (ItemModule)moduleStack;
-					
+					ItemModule moduleM = (ItemModule) moduleStack;
+
 					Kind k = moduleM.getKind();
-					
-					if (k.equals(Kind.VECTORS) || k.equals(Kind.PHASE) || k.equals(Kind.DISLODGEMENT) || (k.equals(Kind.DESMOID) || (k.equals(Kind.ESCHAR) || (k.equals(Kind.RESISTANCE) || (k.equals(Kind.IDEAL) || k.equals(Kind.ORIGIN)))))) {
-						player.world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.BLOCK_DISPENSER_DISPENSE, SoundCategory.PLAYERS, 0.7F, 0.5F);
+
+					if (k.equals(Kind.VECTORS) || k.equals(Kind.PHASE) || k.equals(Kind.DISLODGEMENT)
+							|| (k.equals(Kind.DESMOID) || (k.equals(Kind.ESCHAR) || (k.equals(Kind.RESISTANCE)
+									|| (k.equals(Kind.IDEAL) || k.equals(Kind.ORIGIN)))))) {
+						player.world.playSound(null, player.posX, player.posY, player.posZ,
+								SoundEvents.BLOCK_DISPENSER_DISPENSE, SoundCategory.PLAYERS, 0.7F, 0.5F);
 						return super.onItemRightClick(world, player, hand);
 					}
-					
-					NBTTagCompound module = stackOther.serializeNBT(); 
+
+					NBTTagCompound module = stackOther.serializeNBT();
 					stackMain.getOrCreateSubCompound(SRPWarriorsArmaments.MOD_ID).setTag("hivebanemodule", module);
 					stackOther.shrink(1);
-					
-					player.world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.BLOCK_PISTON_EXTEND, SoundCategory.PLAYERS, 0.7F, 1.0F);
-					
+
+					player.world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.BLOCK_PISTON_EXTEND,
+							SoundCategory.PLAYERS, 0.7F, 1.0F);
+
 				}
 			}
 			return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, player.getHeldItem(hand));
@@ -128,7 +135,7 @@ public class ItemGildedHiveBane extends ItemSword {
 
 		return super.onItemRightClick(world, player, hand);
 	}
-	
+
 	public boolean shouldApple(Kind kind, Entity target) {
 		if (kind.equals(Kind.INBORN) && isInborn(target)) {
 			return true;
@@ -138,7 +145,8 @@ public class ItemGildedHiveBane extends ItemSword {
 			return true;
 		} else if (kind.equals(Kind.ASSIMARA) && target instanceof EntityPAssimara) {
 			return true;
-		} else if (kind.equals(Kind.NEXUS) && (target instanceof EntityPBeckon || target instanceof EntityPDispatcher || target instanceof EntityPRooter)) {
+		} else if (kind.equals(Kind.NEXUS) && (target instanceof EntityPBeckon || target instanceof EntityPDispatcher
+				|| target instanceof EntityPRooter)) {
 			return true;
 		} else if (kind.equals(Kind.CRUDE) && target instanceof EntityPCrude) {
 			return true;
@@ -158,35 +166,46 @@ public class ItemGildedHiveBane extends ItemSword {
 			return true;
 		} else if (kind.equals(Kind.DETERRENT) && target instanceof EntityPStationary) {
 			return true;
+		} else if (kind.equals(Kind.DESMOID) && (isInborn(target) || target instanceof EntityPInfected
+				|| target instanceof EntityPAssimara || target instanceof EntityPHijacked)) {
+			return true;
+		} else if (kind.equals(Kind.ESCHAR) && (target instanceof EntityPFeral || target instanceof EntityPCrude
+				|| target instanceof EntityPPrimitive)) {
+			return true;
+		} else if (kind.equals(Kind.RESISTANCE) && (target instanceof EntityPAdapted || target instanceof EntityPBeckon
+				|| target instanceof EntityPDispatcher || target instanceof EntityPRooter
+				|| target instanceof EntityPStationary)) {
+			return true;
+		} else if (kind.equals(Kind.IDEAL) && (target instanceof EntityPPure || target instanceof EntityPPreeminent
+				|| target instanceof EntityPDerived || target instanceof EntityPAncient)) {
+			return true;
+		} else if (kind.equals(Kind.ORIGIN) && target instanceof EntityParasiteBase) {
+			return true;
 		}
-		
 		return false;
+
 	}
-	
+
 	public boolean isInborn(Entity target) {
-		if (target instanceof EntityAta || 
-				target instanceof EntityButhol || 
-				target instanceof EntityGothol || 
-				target instanceof EntityKol || 
-				target instanceof EntityLodo || 
-				target instanceof EntityMor || 
-				target instanceof EntityMudo || 
-				target instanceof EntityNuuh || 
-				target instanceof EntityRathol || 
-				target instanceof EntityViin) {
+		if (target instanceof EntityAta || target instanceof EntityButhol || target instanceof EntityGothol
+				|| target instanceof EntityKol || target instanceof EntityLodo || target instanceof EntityMor
+				|| target instanceof EntityMudo || target instanceof EntityNuuh || target instanceof EntityRathol
+				|| target instanceof EntityViin) {
 			return true;
 		}
 		return false;
 	}
-	
+
 	public boolean apple(Entity target) {
 		final int hurtResistantTime = target.hurtResistantTime;
-		target.hurtResistantTime = 0;
-		target.attackEntityFrom(DamageSource.MAGIC, 15.5f);
-		target.hurtResistantTime = hurtResistantTime;
+		for (int i=0; i<3;i++) {
+			target.hurtResistantTime = 0;
+			target.attackEntityFrom(DamageSource.MAGIC, 10.0f);
+			target.hurtResistantTime = hurtResistantTime;
+		}
 		return true;
 	}
-	
+
 	private boolean shouldApply(EntityPlayer player) {
 		return player.getCooledAttackStrength(1f) > 0.9;
 	}

@@ -14,12 +14,14 @@ public class WAToolMaterials {
 	
     public static final Item.ToolMaterial SEMI_ORGANIC_SWORD;
     public static final Item.ToolMaterial GILDED_HIVE_BANE; 
+    public static final Item.ToolMaterial THRONGLER; 
     public static final Item.ToolMaterial BLAZESTEEL;
     public static final ItemArmor.ArmorMaterial SEMI_ORGANIC_ARMOR;
 	
 	static {
 		SEMI_ORGANIC_SWORD = EnumHelper.addToolMaterial("SEMI_ORGANIC_SWORD", 0, 512, 0.0f, 3.5f, 14).setRepairItem(new ItemStack(SRPItems.semiorganicingot));
 		GILDED_HIVE_BANE = EnumHelper.addToolMaterial("GILDED_HIVE_BANE", 0, 2048, 0.0f, 4.5f, 17).setRepairItem(new ItemStack(SRPItems.semiorganicingot));
+		THRONGLER = EnumHelper.addToolMaterial("THRONGLER", 0, 4096, 0.0f, 9.0f, 20).setRepairItem(new ItemStack(SRPItems.semiorganicingot));
 		
 		BLAZESTEEL = EnumHelper.addToolMaterial("BLAZESTEEL", 4, 2048, 10.0f, 9.5f, 15).setRepairItem(new ItemStack(WAItems.blazesteel));
 		
