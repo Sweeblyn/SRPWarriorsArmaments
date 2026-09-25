@@ -162,6 +162,12 @@
     },
     "done": true
   },
+  "srparasites:monument_root": {
+    "criteria": {
+      "tick": "2026-09-09 15:59:44 -0600"
+    },
+    "done": true
+  },
   "srparasites:recipes/misc/srp_field_guide": {
     "criteria": {
       "has_flesh": "2026-09-09 16:34:03 -0600"
@@ -173,12 +179,6 @@
       "k_sim_humanhead": "2026-09-09 16:34:03 -0600"
     },
     "done": false
-  },
-  "srparasites:monument_root": {
-    "criteria": {
-      "tick": "2026-09-09 15:59:44 -0600"
-    },
-    "done": true
   },
   "minecraft:recipes/tools/wooden_shovel": {
     "criteria": {
@@ -210,15 +210,15 @@
     },
     "done": true
   },
-  "minecraft:adventure/root": {
-    "criteria": {
-      "killed_something": "2026-09-09 16:32:34 -0600"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/stone_pressure_plate": {
     "criteria": {
       "has_stone": "2026-09-09 15:59:44 -0600"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2026-09-09 16:32:34 -0600"
     },
     "done": true
   },

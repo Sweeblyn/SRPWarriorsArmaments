@@ -3,6 +3,7 @@ package com.sweeblyn.srpwarriorsarmaments.effects;
 import com.dhanantry.scapeandrunparasites.entity.ai.misc.EntityPMalleable;
 import com.dhanantry.scapeandrunparasites.entity.ai.misc.EntityParasiteBase;
 import com.dhanantry.scapeandrunparasites.init.SRPPotions;
+import com.dhanantry.scapeandrunparasites.world.SRPSaveData;
 import com.sweeblyn.srpwarriorsarmaments.SRPWarriorsArmaments;
 import com.sweeblyn.srpwarriorsarmaments.util.MirrorUtils;
 import com.sweeblyn.srpwarriorsarmaments.util.MirrorUtils.IField;
@@ -61,6 +62,8 @@ public class PotionJudgement extends Potion {
 	public void performEffect(EntityLivingBase entityLivingBaseIn, int amplifier) {
 		if (entityLivingBaseIn instanceof EntityParasiteBase) {
 			float atkSpeed = 0.75f * (amplifier + 1.0f) + 0.75f;
+			final SRPSaveData dataS = SRPSaveData.get(entityLivingBaseIn.world, 82);
+			final int id = entityLivingBaseIn.world.provider.getDimension();
 			if (entityLivingBaseIn.isPotionActive(SRPPotions.PIVOT_E)) {
 				atkSpeed = (0.5f*amplifier)+1.0f;
 			}
@@ -80,7 +83,7 @@ public class PotionJudgement extends Potion {
 
 						new float[] { genePoisonHealing$EntityParasiteBase.get(entityLivingBaseIn),
 								geneMobHealing$EntityParasiteBase.get(entityLivingBaseIn),
-								atkSpeed });
+								entityLivingBaseIn.getActivePotionEffect(this).getDuration() > 1 ? atkSpeed : dataS.getGeneModi2(id)[2] });
 
 			} else {
 				((EntityParasiteBase) entityLivingBaseIn).applyGene(
@@ -93,7 +96,7 @@ public class PotionJudgement extends Potion {
 						
 						new float[] { genePoisonHealing$EntityParasiteBase.get(entityLivingBaseIn),
 								geneMobHealing$EntityParasiteBase.get(entityLivingBaseIn),
-								atkSpeed });
+								entityLivingBaseIn.getActivePotionEffect(this).getDuration() > 1 ? atkSpeed : dataS.getGeneModi2(id)[2] });
 			}
 		}
 	}

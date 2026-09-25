@@ -74,7 +74,6 @@ public class ItemGildedHiveBane extends ItemSword {
 			
 			if (shouldApple(k, target)) { //free will
 				apple(target);
-				attacker.world.playSound(null, attacker.posX, attacker.posY, attacker.posZ, SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.PLAYERS, 0.7F, 1.5F);
 			} else if (k.equals(Kind.VECTORS)) {
 				
 			} else if (k.equals(Kind.PHASE)) {

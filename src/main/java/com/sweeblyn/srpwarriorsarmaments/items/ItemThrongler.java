@@ -66,21 +66,23 @@ public class ItemThrongler extends ItemSword {
 
 	@Override
 	public boolean onLeftClickEntity(ItemStack stack, EntityPlayer attacker, Entity target) {
-		if (target instanceof EntityParasiteBase && shouldApply(attacker) && !stack.getOrCreateSubCompound(SRPWarriorsArmaments.MOD_ID).isEmpty()) {
-			Item moduleStack = new ItemStack((NBTTagCompound) stack.getOrCreateSubCompound(SRPWarriorsArmaments.MOD_ID).getTag("hivebanemodule")).getItem();
+		if (target instanceof EntityParasiteBase && shouldApply(attacker)
+				&& !stack.getOrCreateSubCompound(SRPWarriorsArmaments.MOD_ID).isEmpty()) {
+			Item moduleStack = new ItemStack(
+					(NBTTagCompound) stack.getOrCreateSubCompound(SRPWarriorsArmaments.MOD_ID).getTag("hivebanemodule"))
+					.getItem();
 			ItemModule module = (ItemModule) moduleStack;
 			Kind k = module.getKind();
 
 			if (shouldApple(k, target)) { // free will
 				apple(target);
-				attacker.world.playSound(null, attacker.posX, attacker.posY, attacker.posZ,
-						SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.PLAYERS, 0.7F, 1.5F);
-			} else if (k.equals(Kind.VECTORS)) {
-
-			} else if (k.equals(Kind.PHASE)) {
-
-			} else if (k.equals(Kind.DISLODGEMENT)) {
-
+//			} else if (k.equals(Kind.VECTORS)) {
+//
+//			} else if (k.equals(Kind.PHASE)) {
+//
+//			} else if (k.equals(Kind.DISLODGEMENT)) {
+//
+//			}
 			}
 		}
 		return super.onLeftClickEntity(stack, attacker, target);
@@ -113,9 +115,7 @@ public class ItemThrongler extends ItemSword {
 
 					Kind k = moduleM.getKind();
 
-					if (k.equals(Kind.VECTORS) || k.equals(Kind.PHASE) || k.equals(Kind.DISLODGEMENT)
-							|| (k.equals(Kind.DESMOID) || (k.equals(Kind.ESCHAR) || (k.equals(Kind.RESISTANCE)
-									|| (k.equals(Kind.IDEAL) || k.equals(Kind.ORIGIN)))))) {
+					if (k.equals(Kind.VECTORS) || k.equals(Kind.PHASE) || k.equals(Kind.DISLODGEMENT)) {
 						player.world.playSound(null, player.posX, player.posY, player.posZ,
 								SoundEvents.BLOCK_DISPENSER_DISPENSE, SoundCategory.PLAYERS, 0.7F, 0.5F);
 						return super.onItemRightClick(world, player, hand);
@@ -198,7 +198,7 @@ public class ItemThrongler extends ItemSword {
 
 	public boolean apple(Entity target) {
 		final int hurtResistantTime = target.hurtResistantTime;
-		for (int i=0; i<3;i++) {
+		for (int i = 0; i < 3; i++) {
 			target.hurtResistantTime = 0;
 			target.attackEntityFrom(DamageSource.MAGIC, 10.0f);
 			target.hurtResistantTime = hurtResistantTime;

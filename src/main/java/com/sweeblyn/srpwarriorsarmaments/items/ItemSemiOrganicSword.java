@@ -43,7 +43,6 @@ public class ItemSemiOrganicSword extends ItemSword {
 	            target.hurtResistantTime = 0;
 				target.attackEntityFrom(DamageSource.MAGIC, 7.5f);
 	            target.hurtResistantTime = hurtResistantTime;
-	            target.world.playSound(null, attacker.posX, attacker.posY, attacker.posZ, SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.PLAYERS, 0.7F, 2F);
 			}
         }
 		return super.onLeftClickEntity(stack, attacker, target);

@@ -58,6 +58,7 @@ configurations.configureEach {
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 	implementation ("localjars:SRParasites-1.10.9")
+	implementation ("localjars:Baubles-1.12-1.5.2")
 	
     embed('org.spongepowered:mixin:0.8.3-SNAPSHOT') {
         exclude module: 'guava'

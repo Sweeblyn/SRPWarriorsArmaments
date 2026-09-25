@@ -9,6 +9,7 @@ import com.sweeblyn.srpwarriorsarmaments.items.ItemBlazesteelKnife;
 import com.sweeblyn.srpwarriorsarmaments.items.ItemBlazesteelMultitool;
 import com.sweeblyn.srpwarriorsarmaments.items.ItemGildedHiveBane;
 import com.sweeblyn.srpwarriorsarmaments.items.ItemGlinted;
+import com.sweeblyn.srpwarriorsarmaments.items.ItemQuenchTwo;
 import com.sweeblyn.srpwarriorsarmaments.items.ItemSemiOrganicArmor;
 import com.sweeblyn.srpwarriorsarmaments.items.ItemSemiOrganicSword;
 import com.sweeblyn.srpwarriorsarmaments.items.ItemThrongler;
@@ -35,14 +36,20 @@ public class WAItems {
 	public static final Item semi_organic_boots = (Item) new ItemSemiOrganicArmor("semi_organic_boots",
 			WAToolMaterials.SEMI_ORGANIC_ARMOR, EntityEquipmentSlot.FEET);
 
-	public static final Item blazesteel = (Item) new ItemWA("blazesteel");
 	public static final Item blazesteel_dormant = (Item) new ItemWA("blazesteel_dormant");
+	public static final Item blazesteel = (Item) new ItemWA("blazesteel");
+	public static final Item blazesteel_nugget = (Item) new ItemWA("blazesteel_nugget");
 
 	public static final Item purified_nether_star = (Item) new ItemGlinted("purified_nether_star");
 
 	public static final Item blazesteel_knife = (Item) new ItemBlazesteelKnife(WAToolMaterials.BLAZESTEEL);
 	public static final Item blazesteel_cleaver = (Item) new ItemBlazesteelCleaver(WAToolMaterials.BLAZESTEEL);
 	public static final Item blazesteel_multitool = (Item) new ItemBlazesteelMultitool(WAToolMaterials.BLAZESTEEL);
+	
+	public static final Item quench_super = (Item) new ItemWA("quench_super");
+	
+	public static final Item hivesilver = (Item) new ItemWA("hivesilver");
+	public static final Item hivesilver_tainted = (Item) new ItemWA("hivesilver_tainted");
 
 	@SubscribeEvent
 	public static void onItemRegister(RegistryEvent.Register<Item> e) {

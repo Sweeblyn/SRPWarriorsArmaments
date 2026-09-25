@@ -29,6 +29,12 @@
     },
     "done": true
   },
+  "srparasites:kill_adapted": {
+    "criteria": {
+      "k_ada_longarms": "2026-09-24 06:28:40 -0600"
+    },
+    "done": false
+  },
   "minecraft:recipes/tools/compass": {
     "criteria": {
       "has_redstone": "2026-09-09 16:44:32 -0600"

@@ -47,11 +47,9 @@ public class ItemBlazesteelKnife extends ItemSword {
 				int amp = target.getActivePotionEffect(WAPotions.CONSECRATION).getAmplifier();
 				if (amp >= 0 && amp <= 9 && (Math.random() < 0.66)) {
 					target.addPotionEffect(new PotionEffect(WAPotions.CONSECRATION, 200, amp + 1, true, true));
-					target.world.playSound(null, attacker.posX, attacker.posY, attacker.posZ, SoundEvents.ENTITY_PLAYER_HURT_ON_FIRE, SoundCategory.PLAYERS, 0.7F, 0.75F);
 				}
 			} else {
 				target.addPotionEffect(new PotionEffect(WAPotions.CONSECRATION, 200, 0, true, true));
-				target.world.playSound(null, attacker.posX, attacker.posY, attacker.posZ, SoundEvents.ENTITY_PLAYER_HURT_ON_FIRE, SoundCategory.PLAYERS, 0.7F, 0.75F);
 			}
 
 		}

@@ -5,6 +5,18 @@
     },
     "done": true
   },
+  "srparasites:kill_adapted": {
+    "criteria": {
+      "k_ada_longarms": "2026-09-24 06:33:59 -0600"
+    },
+    "done": false
+  },
+  "minecraft:adventure/kill_a_mob": {
+    "criteria": {
+      "husk": "2026-09-24 11:42:03 -0600"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/iron_bars": {
     "criteria": {
       "has_iron_ingot": "2026-09-11 22:17:50 -0600"
@@ -76,6 +88,12 @@
       "has_iron_ingot": "2026-09-11 22:17:50 -0600"
     },
     "done": true
+  },
+  "srparasites:kill_crude": {
+    "criteria": {
+      "k_movingflesh": "2026-09-24 11:38:41 -0600"
+    },
+    "done": false
   },
   "minecraft:recipes/decorations/ladder": {
     "criteria": {
@@ -149,11 +167,24 @@
     },
     "done": true
   },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2026-09-24 06:33:59 -0600"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/light_weighted_pressure_plate": {
     "criteria": {
       "has_gold_ingot": "2026-09-11 22:17:50 -0600"
     },
     "done": true
+  },
+  "srparasites:kill_inborn": {
+    "criteria": {
+      "k_rupter": "2026-09-24 11:41:10 -0600",
+      "k_buglin": "2026-09-24 11:40:48 -0600"
+    },
+    "done": false
   },
   "minecraft:recipes/combat/wooden_sword": {
     "criteria": {
@@ -164,6 +195,24 @@
   "minecraft:recipes/redstone/heavy_weighted_pressure_plate": {
     "criteria": {
       "has_iron_ingot": "2026-09-11 22:17:50 -0600"
+    },
+    "done": true
+  },
+  "srparasites:hunt_season": {
+    "criteria": {
+      "fifty_in_day": "2026-09-24 11:41:41 -0600"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_all_mobs": {
+    "criteria": {
+      "husk": "2026-09-24 11:42:03 -0600"
+    },
+    "done": false
+  },
+  "srparasites:kill_beckon_s1": {
+    "criteria": {
+      "kill_beckon_si": "2026-09-24 11:40:36 -0600"
     },
     "done": true
   },
@@ -202,6 +251,15 @@
       "has_iron_ingot": "2026-09-11 22:17:50 -0600"
     },
     "done": true
+  },
+  "srparasites:kill_assimilated": {
+    "criteria": {
+      "k_sim_cowhead": "2026-09-24 11:39:50 -0600",
+      "k_sim_humanhead": "2026-09-24 11:39:53 -0600",
+      "k_sim_human": "2026-09-24 11:38:26 -0600",
+      "k_sim_cow": "2026-09-24 11:39:09 -0600"
+    },
+    "done": false
   },
   "minecraft:recipes/brewing/golden_carrot": {
     "criteria": {
@@ -262,6 +320,19 @@
       "tick": "2026-09-11 22:17:50 -0600"
     },
     "done": true
+  },
+  "srparasites:recipes/misc/srp_field_guide": {
+    "criteria": {
+      "has_flesh": "2026-09-24 11:40:45 -0600"
+    },
+    "done": true
+  },
+  "srparasites:kill_assimilated_head": {
+    "criteria": {
+      "k_sim_cowhead": "2026-09-24 11:39:50 -0600",
+      "k_sim_humanhead": "2026-09-24 11:39:53 -0600"
+    },
+    "done": false
   },
   "minecraft:recipes/redstone/stone_button": {
     "criteria": {

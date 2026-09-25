@@ -133,6 +133,18 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2026-09-21 06:42:39 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/iron_block": {
+    "criteria": {
+      "has_at_least_9_iron_ingot": "2026-09-21 06:42:39 -0600"
+    },
+    "done": true
+  },
   "srparasites:monument_root": {
     "criteria": {
       "tick": "2026-09-12 19:24:15 -0600"
@@ -178,6 +190,12 @@
   "minecraft:recipes/tools/shears": {
     "criteria": {
       "has_iron_ingot": "2026-09-12 19:24:15 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/coal": {
+    "criteria": {
+      "has_coal_block": "2026-09-21 06:43:22 -0600"
     },
     "done": true
   },

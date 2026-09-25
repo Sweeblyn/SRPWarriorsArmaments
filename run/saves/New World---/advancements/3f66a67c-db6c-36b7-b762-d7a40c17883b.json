@@ -41,6 +41,12 @@
     },
     "done": true
   },
+  "srparasites:kill_beckon_s3": {
+    "criteria": {
+      "kill_beckon_siii": "2026-09-23 20:38:04 -0600"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/stone_button": {
     "criteria": {
       "has_stone": "2026-09-12 17:54:48 -0600"
@@ -61,6 +67,7 @@
   },
   "srparasites:kill_assimilated": {
     "criteria": {
+      "k_sim_bear": "2026-09-23 20:37:21 -0600",
       "k_sim_human": "2026-09-18 19:59:44 -0600"
     },
     "done": false

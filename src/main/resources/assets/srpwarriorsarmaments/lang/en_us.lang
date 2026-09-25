@@ -4,7 +4,7 @@ item.semiorganic_sword.name=§eSemi-Organic Sword
 item.semiorganic_sword.desc=§fA weapon made out of Semi-Organic Alloy plated with §eGold§f that exhibits §4anti-COTH§f properties. Capable of efficiently rending parasites.
 item.gilded_hive_bane.name=§6Gilded Hive's Bane
 item.gilded_hive_bane.desc=§fA §eSemi-Organic blade§f upgraded with technological components to enhance its §4COTH Cell§f destroying properties, but requires a §6Module§f to function. Capable of efficiently smiting parasites corresponding to the §6Module§f placed inside. Will only work with simple §6Modules§f.\n§9[Sneak + Use Item] with a Module in your offhand to Activate.
-item.throngler.name=§7Throng§bmourne
+item.throngler.name=§bThrong§7mourne
 item.throngler.desc=§fA blade completely dedicated to decimating §4The Hive§f, requires a §6Module§f to function. Capable of efficiently demolishing parasites corresponding to the §6Module§f placed inside. Combined §6Modules§f will affect their respective tiers.\n§9[Sneak + Use Item] with a Module in your offhand to Activate.
 
 item.blazesteel_knife.name=§6Blazesteel Knife
@@ -13,7 +13,6 @@ item.blazesteel_cleaver.name=§6Blazesteel Cleaver
 item.blazesteel_cleaver.desc=§fA slow, machete-like blade made out of §6Blazesteel§f that explodes on contact with other Blazesteel fragments. Strikes will cleanse §6Consecration§f from your foe, but deal will massive damage depending on stacks removed.
 item.blazesteel_multitool.name=§6Blazesteel Multi-tool
 item.blazesteel_multitool.desc=§4WIP§f A generalized digging, chopping, and mining tool made out of §6Blazesteel§f that will decimate parasitic blocks.
-
 
 item.semi_organic_helmet.name=§eSemi-Organic Helmet
 item.semi_organic_helmet.desc=§fA helmet made out of Semi-Organic Alloy plated with §eGold§f that hardens in response to contact with §4COTH§f. Grants an effect that reduces parasite damage to its minimum damage and loses potency when doing so.
@@ -28,10 +27,12 @@ item.blazesteel.name=§6Blazesteel Ingot
 item.blazesteel.desc=§7§oAn burning iron alloy infused with the power orb of a §d§oSummoner§7§o or §a§oManducater§7§o. §c§oEXTREMELY toxic §7§oto parasite matter to the point where they will burn excess biomass in an attempt to rid of it. 
 item.blazesteel_dormant.name=§6Dormant Blazesteel Ingot
 item.blazesteel_dormant.desc=§7§oAn ingot of iron densely compacted with blaze powder that is seemingly waiting a power source. Can be infused with the power orb of a §c§oStrong Parasite§7§o.
-item.hivesilver.name=§7Hivesilver Ingot
-item.hivesilver.desc=§7§oAn alloy of silver, among other impurities, combined with §e§oGold§7§o that is still connected to the hive. It may be wise to purify it before use in weaponry.
+item.quench_super.name=§bSuper §6Quench
+item.quench_super.desc=§fA more concentrated quench capable of far better purification... if it didn't stick to your hand when you try to throw it.
+item.hivesilver.name=§bHive§7silver Ingot
+item.hivesilver.desc=§7§oA brilliant blue and silvery alloy that was empowered and purified from the hive. Dangerously sharp and durable when forged into a weapon.
 item.hivesilver_tainted.name=§7Tainted Hivesilver
-item.hivesilver_tainted.desc=§7§oAn chunk of mostly silver, among other impurities, combined with §e§oGold§7§o that is still connected to the hive. It may be wise to purify it before use in weaponry.
+item.hivesilver_tainted.desc=§7§oAn chunk of mostly silver among other impurities, combined with §e§oGold§7§o, that is still connected to the hive. It may be wise to purify it before use in weaponry.
 
 
 item.purified_nether_star.name=§bPurified Nether Star
@@ -40,3 +41,16 @@ item.purified_nether_star.desc=§fA nether star purified of all evil influences 
 effect.divine.name=§eDivine Protection
 effect.consecration.name=§6Consecration
 effect.judgement.name=§6Judgement
+effect.feeble.name=§bFeeble
+
+item.amulet_justice.name=§6Amulet of Justice
+item.amulet_justice.desc=§8§oThe scales shift in your favor, your parasitic adversaries' limbs feel heavier and more sluggish when they face you.\n§9Nearby parasites will have slowed movement and attack speed
+item.amulet_justice_eye.name=§6Eye of Justice
+item.amulet_justice_eye.desc=§8§oThe eye averts your gaze, re-affirming your heroic actions as an enemy of The Source.\n§9Nearby parasites will have greatly reduced attack speed
+item.trinket_beckon_permit.name=§aBeckon Farming Permit
+item.trinket_beckon_permit.desc=§8§oOne forged signature later and parasites cloned from Beckons and Dispatchers now drop usable components! You have absolutely zero idea how this permit even works, but the parasites seem mad about it...\n§9Nearby parasites will be cured of Debar, but will gain Rage III
+item.head_mask.name=Face Mask
+item.head_mask.desc=§8§oA relic of ancient times, perhaps one of these could work against CotH?\n§9Greatly reduced chance to contract and spread CotH
+
+item.amulet_justice.name=§6Amulet of Justice
+item.amulet_justice.desc=§8The .\n§9Nearby
