@@ -1,8 +1,10 @@
 package com.sweeblyn.srpwarriorsarmaments.items;
 
 import com.sweeblyn.srpwarriorsarmaments.SRPWarriorsArmaments;
+import com.sweeblyn.srpwarriorsarmaments.init.WABaubles;
 import com.sweeblyn.srpwarriorsarmaments.init.WAPotions;
 
+import baubles.api.BaublesApi;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
@@ -27,8 +29,8 @@ public class ItemSemiOrganicArmor extends ItemArmor {
         }
         int numPieces = getTotalPieces(player);
         if (player.ticksExisted % 600 == 0) {
-        	if (numPieces > 0) {
-        		player.addPotionEffect(new PotionEffect(WAPotions.DIVINE, 595 , player.isPotionActive(WAPotions.DIVINE) ? numPieces-1+player.getActivePotionEffect(WAPotions.DIVINE).getAmplifier() : numPieces-1  , false, true));
+        	if (numPieces > (player.isPotionActive(WAPotions.DIVINE) ? player.getActivePotionEffect(WAPotions.DIVINE).getAmplifier() : 0)) {
+        		player.addPotionEffect(new PotionEffect(WAPotions.DIVINE, 590 , player.isPotionActive(WAPotions.DIVINE) ? 1+player.getActivePotionEffect(WAPotions.DIVINE).getAmplifier() : 0  , false, true));
         	}
         }
     }
@@ -40,6 +42,8 @@ public class ItemSemiOrganicArmor extends ItemArmor {
         for (ItemStack armorPiece : player.getArmorInventoryList())
         {
             if (armorPiece.getItem() instanceof ItemSemiOrganicArmor) {
+            	amount++;
+            } else if (BaublesApi.isBaubleEquipped(player, WABaubles.charm_emblem) != -1) {
             	amount++;
             }
         }

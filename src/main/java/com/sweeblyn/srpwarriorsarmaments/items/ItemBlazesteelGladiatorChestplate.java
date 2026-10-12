@@ -78,24 +78,25 @@ public class ItemBlazesteelGladiatorChestplate extends ItemArmor {
 			if (player.isPotionActive(MobEffects.SLOWNESS)) {
 				player.removePotionEffect(MobEffects.SLOWNESS);
 			}
-		}
-
-		if (player.ticksExisted % 10 == 0) {
-			Vec3d center = player.getPositionVector();
-			AxisAlignedBB box = new AxisAlignedBB(center.x, center.y, center.z, center.x, center.y, center.z).grow(1);
-			for (Entity entity : player.world.getEntitiesWithinAABB(Entity.class, box,
-					e -> !(e instanceof EntityPlayer))) {
-				if (entity instanceof EntityOrbScary) {
-					if (player.isPotionActive(SRPPotions.RAGE_E)) {
-						player.addPotionEffect(new PotionEffect(SRPPotions.RAGE_E, 200,
-								player.getActivePotionEffect(SRPPotions.RAGE_E).getAmplifier() + 1, false, true));
-					} else {
-						player.addPotionEffect(new PotionEffect(SRPPotions.RAGE_E, 200, 0, false, true));
+			
+			if (player.ticksExisted % 10 == 0) {
+				Vec3d center = player.getPositionVector();
+				AxisAlignedBB box = new AxisAlignedBB(center.x, center.y, center.z, center.x, center.y, center.z).grow(1);
+				for (Entity entity : player.world.getEntitiesWithinAABB(Entity.class, box,
+						e -> !(e instanceof EntityPlayer))) {
+					if (entity instanceof EntityOrbScary) {
+						if (player.isPotionActive(SRPPotions.RAGE_E)) {
+							player.addPotionEffect(new PotionEffect(SRPPotions.RAGE_E, 200,
+									player.getActivePotionEffect(SRPPotions.RAGE_E).getAmplifier() + 1, false, true));
+						} else {
+							player.addPotionEffect(new PotionEffect(SRPPotions.RAGE_E, 200, 0, false, true));
+						}
 					}
 				}
-
 			}
 		}
+
+		
 	}
 
 	private static int getTotalPieces(EntityPlayer player) {

@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod.EventBusSubscriber
-public class EventHandler { //thanks eevee <3
+public class EventHandler { //thanks eevee <3 (nischi is totally gonna kill me for doing it like this :sob:)
 	public static final Random RAND;
 
 	@SubscribeEvent

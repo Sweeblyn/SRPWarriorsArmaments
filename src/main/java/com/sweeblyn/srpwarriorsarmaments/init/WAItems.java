@@ -20,6 +20,7 @@ import com.sweeblyn.srpwarriorsarmaments.misc.WAToolMaterials;
 
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -52,6 +53,7 @@ public class WAItems {
 	public static final Item blazesteel_dormant = (Item) new ItemWA("blazesteel_dormant");
 	public static final Item blazesteel = (Item) new ItemWA("blazesteel");
 	public static final Item blazesteel_nugget = (Item) new ItemWA("blazesteel_nugget");
+	public static final Item blazesteel_block = (Item) new ItemBlock(WABlocks.blazesteel_block).setRegistryName(WABlocks.blazesteel_block.getRegistryName());
 
 	public static final Item purified_nether_star = (Item) new ItemGlinted("purified_nether_star");
 
@@ -73,7 +75,11 @@ public class WAItems {
 				if (Modifier.isStatic(f.getModifiers()) && f.get(null) instanceof Item) {
 					Item item = (Item) f.get(null);
 
+					System.out.println(item.getTranslationKey());
 					if (item.getTranslationKey().equals("item.null")) {
+						ResourceLocation regName = item.getRegistryName();
+						item.setTranslationKey(regName.getNamespace() + "." + regName.getPath());
+					} else if (item.getTranslationKey().equals("tile.null")) {
 						ResourceLocation regName = item.getRegistryName();
 						item.setTranslationKey(regName.getNamespace() + "." + regName.getPath());
 					}

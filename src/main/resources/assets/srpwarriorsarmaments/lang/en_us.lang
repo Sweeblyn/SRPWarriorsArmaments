@@ -26,7 +26,7 @@ item.semi_organic_boots.desc=§eEach Piece: Grants +1 Level of Divine Protection
 item.blazesteel_helmet.name=§6Blazesteel Helmet
 item.blazesteel_helmet.desc=§6Each Piece: Counts towards the Paladin Chestplate and Gladiator Chestplate set bonuses
 item.blazesteel_paladin_chestplate.name=§6Blazesteel Paladin Chestplate
-item.blazesteel_paladin_chestplate.desc=§6Full Set: +10 Max Health\n§6Full Set: Reduces Parasite damage by 60%\n§6Full Set: Immunity to the damage dealing effect of Orbs
+item.blazesteel_paladin_chestplate.desc=§6Full Set: +10 Max Health\n§6Full Set: Reduces Parasite damage by 60%\n§6Full Set: Immunity to the massive damage dealt at the end of Orbs
 item.blazesteel_gladiator_chestplate.name=§6Blazesteel Gladiator Chestplate
 item.blazesteel_gladiator_chestplate.desc=§6Full Set: +100% damage dealt as Consecration damage\n§6Full Set: Reduces Parasite damage by 20%\n§6Full Set: Immunity to Slowness\n§6Full Set: Grants stacking Rage the longer you stay inside of an Orb
 item.blazesteel_leggings.name=§6Blazesteel Leggings
@@ -35,13 +35,13 @@ item.blazesteel_boots.name=§6Blazesteel Boots
 item.blazesteel_boots.desc=§6Each Piece: Counts towards the Paladin Chestplate and Gladiator Chestplate set bonuses
 
 item.blazesteel.name=§6Blazesteel Ingot
-item.blazesteel.desc=§7§oAn burning iron alloy infused with the power orb of a §d§oSummoner§7§o or §a§oManducater§7§o. §c§oEXTREMELY toxic §7§oto parasite matter to the point where they will burn excess biomass in an attempt to rid of it. 
+item.blazesteel.desc=§7§oAn burning iron alloy infused with the power orb of a §d§oSummoner§7§o or §a§oManducater§7§o. §c§oEXTREMELY toxic §7§oto parasite matter to the point where they will burn excess biomass in an attempt to rid of it. Parasites appear to also take more damage but lose their vulnerability to fire when under the effects of Consecration.
 item.blazesteel_dormant.name=§6Dormant Blazesteel Ingot
 item.blazesteel_dormant.desc=§7§oAn ingot of iron densely compacted with blaze powder that is seemingly waiting a power source. Can be infused with the power orb of a §c§oStrong Parasite§7§o.
 item.quench_super.name=§bSuper §6Quench
 item.quench_super.desc=§fA more concentrated quench capable of far better purification... if it didn't stick to your hand when you try to throw it.
 item.hivesilver.name=§bHive§7silver §fIngot
-item.hivesilver.desc=§7§oA brilliant blue and silvery alloy that was empowered and purified from the hive. Dangerously sharp, durable, and seems to weaken parasites on contact...
+item.hivesilver.desc=§7§oA brilliant blue and silvery alloy that was empowered and purified from the hive. Can be forged into something dangerously sharp, durable, and seems to weaken parasites on contact...
 item.hivesilver_tainted.name=§7Tainted Hivesilver
 item.hivesilver_tainted.desc=§7§oAn chunk of mostly silver among other impurities, combined with §e§oGold§7§o, that is still connected to the hive. It may be wise to purify it before use in weaponry.
 
