@@ -49,12 +49,21 @@ public class ItemCharmEmblem extends Item implements IBauble {
 
 	@Override
 	public void onWornTick(ItemStack itemstack, EntityLivingBase player) {
-		int numPieces = getTotalPieces((EntityPlayer)player);
-        if (player.ticksExisted % 600 == 0) {
-        	if (numPieces > (player.isPotionActive(WAPotions.DIVINE) ? player.getActivePotionEffect(WAPotions.DIVINE).getAmplifier() : 0)) {
-        		player.addPotionEffect(new PotionEffect(WAPotions.DIVINE, 590 , player.isPotionActive(WAPotions.DIVINE) ? 1+player.getActivePotionEffect(WAPotions.DIVINE).getAmplifier() : 0  , false, true));
-        	}
-        }
+		if (!player.getEntityWorld().isRemote) {
+			int numPieces = getTotalPieces((EntityPlayer) player);
+			if (player.ticksExisted % 600 == 0) {
+				System.out.println(numPieces+" "+(player.isPotionActive(WAPotions.DIVINE) ? player.getActivePotionEffect(WAPotions.DIVINE).getAmplifier()+1: "potion isnt applied yet"));
+				if (numPieces > (player.isPotionActive(WAPotions.DIVINE)
+						? player.getActivePotionEffect(WAPotions.DIVINE).getAmplifier()+1
+						: 0)) {
+					player.addPotionEffect(new PotionEffect(WAPotions.DIVINE, 590,
+							player.isPotionActive(WAPotions.DIVINE)
+									? 1 + player.getActivePotionEffect(WAPotions.DIVINE).getAmplifier()
+									: 0,
+							false, true));
+				}
+			}
+		}
 	}
 
 	@Override
@@ -74,19 +83,19 @@ public class ItemCharmEmblem extends Item implements IBauble {
 		}
 		return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, player.getHeldItem(hand));
 	}
-	
-	private int getTotalPieces(EntityPlayer player)
-    {
-        int amount = 0;
-        for (ItemStack armorPiece : player.getArmorInventoryList())
-        {
-            if (armorPiece.getItem() instanceof ItemSemiOrganicArmor) {
-            	amount++;
-            } else if (BaublesApi.isBaubleEquipped(player, WABaubles.charm_emblem) != -1) {
-            	amount++;
-            }
-        }
 
-        return amount;
-    }
+	private int getTotalPieces(EntityPlayer player) {
+		int amount = 0;
+		for (ItemStack armorPiece : player.getArmorInventoryList()) {
+			if (armorPiece.getItem() instanceof ItemSemiOrganicArmor) {
+				amount++;
+			}
+		}
+		
+		if (BaublesApi.isBaubleEquipped(player, WABaubles.charm_emblem) != -1) {
+			amount++;
+		}
+
+		return amount;
+	}
 }

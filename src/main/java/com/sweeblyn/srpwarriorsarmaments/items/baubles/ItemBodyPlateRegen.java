@@ -48,7 +48,7 @@ public class ItemBodyPlateRegen extends Item implements IBauble {
 
 	@Override
 	public void onWornTick(ItemStack itemstack, EntityLivingBase player) {
-		if (!player.world.isRemote && player.ticksExisted % 50 == 0) {
+		if (!player.world.isRemote && player.ticksExisted % 50 == 0&&player.ticksExisted!=0) {
 			player.getEquipmentAndArmor().forEach(equip -> {
 				if (equip.getItem() instanceof ItemArmor && Math.random() > 0.5f) {
 					int newDurability = equip.getItemDamage() - 1;
